@@ -1,0 +1,25 @@
+/* Mobile and Tablet Specific Refinements */
+/* Most responsiveness is handled in style.css */
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: var(--bg-deep);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+        display: flex !important;
+        /* Force flex when active */
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+}
